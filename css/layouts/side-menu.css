@@ -209,7 +209,7 @@ small screens.
 /*
 Hides the menu at `48em`, but modify this based on your app's needs.
 */
-@media (min-width: 66em) {
+@media (min-width: 67em) {
 
     .header,
     .content {
@@ -236,7 +236,7 @@ Hides the menu at `48em`, but modify this based on your app's needs.
     }
 }
 
-@media (max-width: 66em) {
+@media (max-width: 67em) {
     /* Only apply this when the window is small. Otherwise, the following
     case results in extra padding on the left:
         * Make the window small.
@@ -246,6 +246,11 @@ Hides the menu at `48em`, but modify this based on your app's needs.
     #layout.active {
         position: relative;
         left: 200px;
+    }
+
+    .pure-vid-responsive {
+        margin-top: 35px;
+        padding-top: 15px;
     }
 }
 
@@ -277,4 +282,11 @@ Hides the menu at `48em`, but modify this based on your app's needs.
 .simple-link:hover {
     text-decoration: underline;
     color: #888;
+}
+
+/* Videos */
+
+.pure-vid-responsive {
+    max-width: 100%;
+    height: auto;
 }
