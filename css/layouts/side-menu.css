@@ -2,6 +2,7 @@
 
 body {
     color: #777;
+    font-family: source-sans-pro, sans-serif;
 }
 
 .pure-img-responsive {
@@ -58,7 +59,7 @@ The content `<div>` is where all your content goes.
  }
     .header h1 {
         margin: 0.2em 0;
-        font-size: 3em;
+        font-size: 3.2em;
         font-weight: 300;
     }
      .header h2 {
@@ -92,6 +93,9 @@ appears on the left side of the page.
     background: #191818;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
+    font-size: 20px;
+    font-family: source-sans-pro, sans-serif;
+    font-weight: 600;
 }
     /*
     All anchors inside the menu should be styled like this.
@@ -167,7 +171,7 @@ small screens.
     left: 0; /* "#menu width" */
     background: #000;
     background: rgba(0,0,0,0.7);
-    font-size: 10px; /* change this value to increase/decrease button size */
+    font-size: 13px; /* change this value to increase/decrease button size */
     z-index: 10;
     width: 2em;
     height: auto;
@@ -270,6 +274,9 @@ Hides the menu at `48em`, but modify this based on your app's needs.
     margin-right: -50%;
     transform: translate(-50%, -50%);
     font-size: 1.25em;
+    font-family: source-serif-pro, serif;
+    font-style: normal;
+    font-weight: 500;
 }
 
 /* Better looking links */
@@ -277,6 +284,9 @@ Hides the menu at `48em`, but modify this based on your app's needs.
 .simple-link {
     text-decoration: none;
     color: #222;
+    font-family: source-serif-pro, serif;
+    font-style: normal;
+    font-weight: 500;
 }
 
 .simple-link:hover {
@@ -289,4 +299,15 @@ Hides the menu at `48em`, but modify this based on your app's needs.
 .pure-vid-responsive {
     max-width: 100%;
     height: auto;
+}
+
+/* General */
+
+p {
+    font-family: source-serif-pro, serif;
+    font-size: 18px;
+}
+.content li {
+    font-family: source-serif-pro, serif;
+    font-size: 18px;
 }
