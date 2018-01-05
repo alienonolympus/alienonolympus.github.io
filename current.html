@@ -83,6 +83,12 @@
 
             <p>The core web scraping was done by requesting the source file of the URL and looking for metadata such as the author and date modified of a website. It is fairly straightforward except for the inclusion of a logistic regression learning algorithm used to 'find' the author when the author is not explicitly stated. The inclusion of this logistic regression learner was just for fun. The learner was trained with 7 features of text in links found on the website: inclusion of numbers; amount of 'words' with only alphabets; whether there is a first name matching the contents of a csv file; whether there is a surname matching the contents of a csv file; whether there is a word matching the contents of a csv file of common words used; length of the text; how many words are capitalised. The trained parameters were fairly accurate, although it can get confused when there are other names that are not related to the author of a website.</p>
 
+            <p>Here is the web scraping in action on an early version of webcite:</p>
+
+            <video class="pure-img-responsive" controls>
+                <source src="vid/webcite1.ogv" type="video/ogg">
+            </video>
+
         </div>
     </div>
 </div>
