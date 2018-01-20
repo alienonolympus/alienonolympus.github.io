@@ -1,5 +1,6 @@
 body {
     color: #777;
+    font-family: source-sans-pro, sans-serif;
 }
 
 .pure-img-responsive {
@@ -32,12 +33,12 @@ This is the parent `<div>` that contains the menu and the content area.
 }
 
 #layout.active #menu {
-    left: 150px;
-    width: 150px;
+    left: 200px;
+    width: 200px;
 }
 
 #layout.active .menu-link {
-    left: 150px;
+    left: 200px;
 }
 
 /*
@@ -62,13 +63,13 @@ The content `<div>` is where all your content goes.
 
 .header h1 {
     margin: 0.2em 0;
-    font-size: 3em;
+    font-size: 3.2em;
     font-weight: 300;
 }
 
 .header h2 {
     font-weight: 300;
-    color: #ccc;
+    color: #aaa;
     padding: 0;
     margin-top: 0;
 }
@@ -79,15 +80,24 @@ The content `<div>` is where all your content goes.
     color: #888;
 }
 
+.content-subhead a {
+    text-decoration: none;
+    color: #888;
+}
+
+.content-subhead a:hover {
+    text-decoration: underline;
+}
+
 /*
 The `#menu` `<div>` is the parent `<div>` that contains the `.pure-menu` that
 appears on the left side of the page.
 */
 
 #menu {
-    margin-left: -150px;
+    margin-left: -200px;
     /* "#menu" width */
-    width: 150px;
+    width: 200px;
     position: fixed;
     top: 0;
     left: 0;
@@ -97,6 +107,9 @@ appears on the left side of the page.
     background: #191818;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
+    font-size: 20px;
+    font-family: source-sans-pro, sans-serif;
+    font-weight: 600;
 }
 
 /*
@@ -161,7 +174,7 @@ appears on the left side of the page.
 #menu .pure-menu-heading {
     font-size: 110%;
     color: #fff;
-    margin: 0;
+    margin-bottom: 2px;
 }
 
 /* -- Dynamic Button For Responsive Menu -------------------------------------*/
@@ -241,7 +254,7 @@ Hides the menu at `48em`, but modify this based on your app's needs.
 }
 
 #menu {
-    left: 150px;
+    left: 200px;
 }
 
 .menu-link {
@@ -251,5 +264,59 @@ Hides the menu at `48em`, but modify this based on your app's needs.
 }
 
 #layout.active .menu-link {
-    left: 150px;
+    left: 200px;
+}
+
+/* My Stuff */
+
+/* Center items in grid */
+
+.center-grid {
+    position: relative;
+}
+
+.center-content {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.25em;
+    font-family: source-serif-pro, serif;
+    font-style: normal;
+    font-weight: 500;
+}
+
+/* Better looking links */
+
+.simple-link {
+    text-decoration: none;
+    color: #222;
+    font-family: source-serif-pro, serif;
+    font-style: normal;
+    font-weight: 500;
+}
+
+.simple-link:hover {
+    text-decoration: underline;
+    color: #888;
+}
+
+/* Videos */
+
+.pure-vid-responsive {
+    max-width: 100%;
+    height: auto;
+}
+
+/* General */
+
+p {
+    font-family: source-serif-pro, serif;
+    font-size: 18px;
+}
+.content li {
+    font-family: source-serif-pro, serif;
+    font-size: 18px;
 }
