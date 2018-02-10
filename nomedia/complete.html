@@ -6,17 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="My Personal Portfolio">
     
-    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
     <title>Portfolio | Complete Projects</title>
     
     <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.typekit.net/mhv5bqg.css">
     
     <!--[if lte IE 8]>
-        <link rel="stylesheet" href="css/layouts/side-menu-old-ie.css">
+        <link rel="stylesheet" href="../css/layouts/side-menu-old-ie.css">
     <![endif]-->
     <!--[if gt IE 8]><!-->
-        <link rel="stylesheet" href="css/layouts/side-menu.css">
+        <link rel="stylesheet" href="../css/layouts/side-menu.css">
     <!--<![endif]-->
 
     <!--[if lte IE 8]>
@@ -58,7 +58,7 @@
         <div class="content">
             <h2 class="content-subhead">Homework Completion</h2>
             
-            <p><a href="files/hw.py" class="simple-link">Link to file</a></p>
+            <p><a href="../files/hw.py" class="simple-link">Link to file</a></p>
 
             <p>This was less of a project and more of a simple script I created in an hour in order to automate clicking 'Complete Homework' on Moodle. It is a webcrawler that logs into moodle and checks for any incomplete homework. A prompt follows to ask if you want to complete all the homework. I considered changing this from a console application to one with a GUI but felt like it was unnecessary. This script does not do much apart from, well, completing the homework so a user interface will not make it easier to use.</p>
 
@@ -73,33 +73,10 @@
             <p>RefMe, a citation website, was shutdown and merged into <a href="http://www.citethisforme.com/" class="simple-link">Cite This For Me</a> The merged website was not as responsive and did not support saving your bibliographies. Of course, these features were included in the premium version but I was reluctant to pay for a citation service. As a result, I decided to create my own version that would scrape information from websites and create a bibliography that can be saved online.</p>
 
             <p>The core web scraping was done by requesting the source file of the URL and looking for metadata such as the author and date modified of a website. It is fairly straightforward except for the inclusion of a logistic regression learning algorithm used to 'find' the author when the author is not explicitly stated. The inclusion of this logistic regression learner was just for fun. The learner was trained with 7 features of text in links found on the website: inclusion of numbers; amount of 'words' with only alphabets; whether there is a first name matching the contents of a csv file; whether there is a surname matching the contents of a csv file; whether there is a word matching the contents of a csv file of common words used; length of the text; how many words are capitalised. The trained parameters were fairly accurate, although it can get confused when there are other names that are not related to the author of a website.</p>
-
-            <p>Here is the web scraping in action on an early version of webcite:</p>
-
-            <div class="pure-g">
-                <video class="pure-vid-responsive" controls>
-                    <source src="vid/webcite1.ogv" type="video/ogg">
-                </video>
-            </div>
             
             <p>After finishing the core web scraping program, I moved on to creating a wrapper using HTML and making a webapp. I tried implementing this in many different Python frameworks such as Django and Flask but my progress was slow as this was my first time creating a webapp. Being impatient, I decided to take the easiest route and use PHP. This made it slightly more complicated to use the core web scraper which was written in Python and modifications had to made. A Python file acts as the interface between the webapp and the website written in PHP. Different parameters can be passed onto this file for it to do different things, allowing the PHP to run the Python file using exec and passing necessary arguments. Another choice I made was to not use any existing PHP framework such as Laravel as I would learn a lot more. This also let me know how everything works instead of blindly following a tutorial listing out functions from a library. However, this made my code extremely messy and would make implementing CSS significantly harder.</p>
 
             <p>When trying to implement CSS, I realised that using an existing framework such as Boostrap would be almost impossible as I had to rewrite a significant portion of my code. Consequently, I decided to simply write my own stylesheets. Still, I had to rewrite part of my code which included adding divs and tables in order to structure the content of the webpage. I did not make use of flexbox as I was still unfamiliar with flexbox and wished to create something visually appealing fast.</p>
-
-            <p>Here is some screenshots of webcite after I added CSS to it: </p>
-
-            <div class="pure-g">
-                <div class="pure-u-1 pure-u-md-1-2">
-                    <img class="pure-img-responsive" src="img/webcite1.png" alt="Login Page">
-                </div>
-                <div class="pure-u-1 pure-u-md-1-2">
-                    <img class="pure-img-responsive" src="img/webcite3.png" alt="Edit Entry Page">
-                </div>
-                <div class="pure-u-1 pure-u-md-1-1">
-                    <img class="pure-img-responsive" src="img/webcite2.png" alt="Bibliography Page">
-                </div>
-            </div>
-
         </div>
     </div>
 </div>
@@ -107,7 +84,7 @@
 
 
 
-<script src="js/ui.js"></script>
+<script src="../js/ui.js"></script>
 
 </body>
 </html>

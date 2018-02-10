@@ -1,0 +1,88 @@
+<!-- MODIFIED FROM https://purecss.io/layouts/side-menu/ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A layout example with a side menu that hides on mobile, just like the Pure website.">
+    
+    <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
+    <title>Portfolio</title>
+    
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.typekit.net/mhv5bqg.css">
+    
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" href="../css/layouts/side-menu-old-ie.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+        <link rel="stylesheet" href="../css/layouts/side-menu.css">
+    <!--<![endif]-->
+
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-old-ie-min.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+        <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-min.css">
+    <!--<![endif]-->
+</head>
+<body>
+
+
+
+
+
+
+<div id="layout">
+
+    <a href="#menu" id="menuLink" class="menu-link">
+        <span></span>
+    </a>
+
+    <div id="menu">
+        <div class="pure-menu">
+            <a class="pure-menu-heading" href="#">Portfolio</a>
+
+            <ul class="pure-menu-list">
+                <li class="pure-menu-item menu-item-divided pure-menu-selected">
+                    <a href="#" class="pure-menu-link">Home</a>
+                </li>
+                <li class="pure-menu-item"><a href="early.html" class="pure-menu-link">Early Projects</a></li>
+                <li class="pure-menu-item"><a href="complete.html" class="pure-menu-link">Complete Projects</a></li>
+                <li class="pure-menu-item"><a href="current.html" class="pure-menu-link">Current Projects</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="main">
+        <div class="header">
+            <h1>Portfolio</h1>
+            <h2>alienonolympus.github.io</h2>
+        </div>
+
+        <div class="content">
+            <h2 class="content-subhead"><a href="early.html">Early Projects</a></h2>
+            <p>
+                During this time, my interest in programming and computer science started to develop and many of my projects, although simple, took up a long time as I was just learning about basic programming. These projects are mainly small scale projects that had not much use, i.e. do not solve any problems, and were mainly used to showoff to classmates. However, I was not consistent with this and programming as a hobby would fade in and out of my free time.
+            </p>
+
+            <h2 class="content-subhead"><a href="complete.html">Complete Projects</a></h2>
+            <p>
+                After I made this portfolio, I started documenting more of the projects/scripts/programs I do. I started focusing more on things that can actually help me instead of programs that are used for showing off to classmates. Most of the scripts/programs are linked inside this repository, while projects that take a bit more time will be hosted on a separate repository. These projects are complete and I do not plan on changing them.
+            </p>
+
+            <h2 class="content-subhead"><a href="current.html">Current Projects</a></h2>
+            <p>
+                As the name suggests, the current projects are projects I am currently working on. Like the complete projects, these projects all started after I started documenting my work in this portfolio. Many of them will have significantly more detailed explanations and documentation of the development process.
+            </p>
+        </div>
+    </div>
+</div>
+
+
+
+
+<script src="../js/ui.js"></script>
+
+</body>
+</html>
