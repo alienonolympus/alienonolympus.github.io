@@ -77,6 +77,32 @@
 
             <p>There are a collection of novel and classic minigames implemented, including flippy, tic-tac-toe etc.. However, my progress halted when I could not find free time while preparing for exams.</p>
 
+            <h2 class="content-subhead">Calc</h2>
+
+            <p><a href="https://github.com/alienonolympus/calc" class="simple-link">Link to repository</a></p>
+            
+            <p>Started 2018</p>
+
+            <p>I created this small project as an attempt to familiarise myself with the use, traversal and manipulation of tree structures. Mathematical expressions are can be stored recursively in trees, which makes them suitable for this project. Each mathematical expression is a tree structure that (usually) has an operation as a root node. When evaluating the result of the expression, the program uses the value of the child nodes and the nature of the operation at the root node.</p>
+
+            <p>Example: 1+(2*(3+4)+5)*6-7</p>
+
+            <pre>
+Value: 108.0, Type: -
+|-- Value: 115.0, Type: +
+    |-- Value: 1.0, Type: num
+    |-- Value: 114.0, Type: *
+        |-- Value: 19.0, Type: +
+            |-- Value: 14.0, Type: *
+                |-- Value: 2.0, Type: num
+                |-- Value: 7.0, Type: +
+                    |-- Value: 3.0, Type: num
+                    |-- Value: 4.0, Type: num
+            |-- Value: 5.0, Type: num
+        |-- Value: 6.0, Type: num
+|-- Value: 7.0, Type: num
+            </pre>
+
         </div>
     </div>
 </div>
