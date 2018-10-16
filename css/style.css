@@ -1,0 +1,45 @@
+h3, h5, a, pre {
+  font-family: source-code-pro, monospace;
+  font-weight: 600;
+  font-style: normal;
+  color: #ffffff; }
+
+h1, h4, p, p a {
+  font-family: source-sans-pro, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  color: #ffffff; }
+
+p a {
+  font-weight: 400; }
+  p a:hover {
+    text-decoration: underline; }
+
+.uline-hover div {
+  display: inline-block; }
+
+a.uline-hover:hover h3 {
+  border-bottom: 3px solid #ffffff; }
+
+#content {
+  position: absolute;
+  width: 100%; }
+  #content #title {
+    width: 30%;
+    left: 10px;
+    position: absolute; }
+  #content #links {
+    width: 65%;
+    right: 10px;
+    text-align: right;
+    position: absolute; }
+
+.projects {
+  display: none;
+  position: absolute;
+  overflow-y: scroll; }
+
+.media {
+  width: 100%; }
+
+/*# sourceMappingURL=style.css.map */
