@@ -64,45 +64,45 @@
 
                 <div id="complete_content" class="projects">
                     <div class="container">
-                            <h3>Homework Completion</h3>
-                            <p>This was less of a project and more of a simple script I created in an hour in order to automate clicking 'Complete Homework' on Moodle. It is a webcrawler that logs into moodle and checks for any incomplete homework. A prompt follows to ask if you want to complete all the homework. I considered changing this from a console application to one with a GUI but felt like it was unnecessary. This script does not do much apart from, well, completing the homework so a user interface will not make it easier to use.</p>
-                            <p>Requires geckodriver, BeautifulSoup, numpy (decided to use numpy just because it simplified the problem of using 2D arrays and I already have it installed) and selenium.</p>
-                            <p><a target="_blank" href="https://alienonolympus.github.io/files/hw.py">Link to File</a></p>
+                        <h3>Homework Completion</h3>
+                        <p>This was less of a project and more of a simple script I created in an hour in order to automate clicking 'Complete Homework' on Moodle. It is a webcrawler that logs into moodle and checks for any incomplete homework. A prompt follows to ask if you want to complete all the homework. I considered changing this from a console application to one with a GUI but felt like it was unnecessary. This script does not do much apart from, well, completing the homework so a user interface will not make it easier to use.</p>
+                        <p>Requires geckodriver, BeautifulSoup, numpy (decided to use numpy just because it simplified the problem of using 2D arrays and I already have it installed) and selenium.</p>
+                        <p><a target="_blank" href="https://alienonolympus.github.io/files/hw.py">Link to File</a></p>
 
-                            <hr>
-        
-                            <h3>Webcite</h3>
-                            <p>RefMe, a citation website, was shutdown and merged into CiteThisForMe The merged website was not as responsive and did not support saving your bibliographies. Of course, these features were included in the premium version but I was reluctant to pay for a citation service. As a result, I decided to create my own version that would scrape information from websites and create a bibliography that can be saved online.</p>
-                            <p>The core web scraping was done by requesting the source file of the URL and looking for metadata such as the author and date modified of a website. It is fairly straightforward except for the inclusion of a logistic regression learning algorithm used to 'find' the author when the author is not explicitly stated. The inclusion of this logistic regression learner was just for fun. The learner was trained with 7 features of text in links found on the website: inclusion of numbers; amount of 'words' with only alphabets; whether there is a first name matching the contents of a csv file; whether there is a surname matching the contents of a csv file; whether there is a word matching the contents of a csv file of common words used; length of the text; how many words are capitalised. The trained parameters were fairly accurate, although it can get confused when there are other names that are not related to the author of a website.</p>
-                            <p>Here is the web scraping in action on an early version of webcite:</p>
-                            <video class="media" controls="">
-                                <source src="media/webcite1.ogv" type="video/ogg">
-                            </video>
-                            <p>After finishing the core web scraping program, I moved on to creating a wrapper using HTML and making a webapp. I tried implementing this in many different Python frameworks such as Django and Flask but my progress was slow as this was my first time creating a webapp. Being impatient, I decided to take the easiest route and use PHP. This made it slightly more complicated to use the core web scraper which was written in Python and modifications had to made. A Python file acts as the interface between the webapp and the website written in PHP. Different parameters can be passed onto this file for it to do different things, allowing the PHP to run the Python file using exec and passing necessary arguments. Another choice I made was to not use any existing PHP framework such as Laravel as I would learn a lot more. This also let me know how everything works instead of blindly following a tutorial listing out functions from a library. However, this made my code extremely messy and would make implementing CSS significantly harder.</p>
-                            <p>When trying to implement CSS, I realised that using an existing framework such as Boostrap would be almost impossible as I had to rewrite a significant portion of my code. Consequently, I decided to simply write my own stylesheets. Still, I had to rewrite part of my code which included adding divs and tables in order to structure the content of the webpage. I did not make use of flexbox as I was still unfamiliar with flexbox and wished to create something visually appealing fast.</p>
-                            <p>Here is some screenshots of webcite after I added CSS to it: </p>
-                            <img class="materialboxed media" src="media/webcite1.png">
-                            <img class="materialboxed media" src="media/webcite2.png">
-                            <img class="materialboxed media" src="media/webcite3.png">
-                            <p><a target="_blank" href="https://github.com/alienonolympus/webcite">Link to Repository</a></p>
+                        <hr>
+    
+                        <h3>Webcite</h3>
+                        <p>RefMe, a citation website, was shutdown and merged into CiteThisForMe The merged website was not as responsive and did not support saving your bibliographies. Of course, these features were included in the premium version but I was reluctant to pay for a citation service. As a result, I decided to create my own version that would scrape information from websites and create a bibliography that can be saved online.</p>
+                        <p>The core web scraping was done by requesting the source file of the URL and looking for metadata such as the author and date modified of a website. It is fairly straightforward except for the inclusion of a logistic regression learning algorithm used to 'find' the author when the author is not explicitly stated. The inclusion of this logistic regression learner was just for fun. The learner was trained with 7 features of text in links found on the website: inclusion of numbers; amount of 'words' with only alphabets; whether there is a first name matching the contents of a csv file; whether there is a surname matching the contents of a csv file; whether there is a word matching the contents of a csv file of common words used; length of the text; how many words are capitalised. The trained parameters were fairly accurate, although it can get confused when there are other names that are not related to the author of a website.</p>
+                        <p>Here is the web scraping in action on an early version of webcite:</p>
+                        <video class="media" controls="">
+                            <source src="media/webcite1.ogv" type="video/ogg">
+                        </video>
+                        <p>After finishing the core web scraping program, I moved on to creating a wrapper using HTML and making a webapp. I tried implementing this in many different Python frameworks such as Django and Flask but my progress was slow as this was my first time creating a webapp. Being impatient, I decided to take the easiest route and use PHP. This made it slightly more complicated to use the core web scraper which was written in Python and modifications had to made. A Python file acts as the interface between the webapp and the website written in PHP. Different parameters can be passed onto this file for it to do different things, allowing the PHP to run the Python file using exec and passing necessary arguments. Another choice I made was to not use any existing PHP framework such as Laravel as I would learn a lot more. This also let me know how everything works instead of blindly following a tutorial listing out functions from a library. However, this made my code extremely messy and would make implementing CSS significantly harder.</p>
+                        <p>When trying to implement CSS, I realised that using an existing framework such as Boostrap would be almost impossible as I had to rewrite a significant portion of my code. Consequently, I decided to simply write my own stylesheets. Still, I had to rewrite part of my code which included adding divs and tables in order to structure the content of the webpage. I did not make use of flexbox as I was still unfamiliar with flexbox and wished to create something visually appealing fast.</p>
+                        <p>Here is some screenshots of webcite after I added CSS to it: </p>
+                        <img class="materialboxed media" src="media/webcite1.png">
+                        <img class="materialboxed media" src="media/webcite2.png">
+                        <img class="materialboxed media" src="media/webcite3.png">
+                        <p><a target="_blank" href="https://github.com/alienonolympus/webcite">Link to Repository</a></p>
 
-                            <hr>
+                        <hr>
 
-                            <h3>Website Themes</h3>
-                            <p>These website themes are a collection of website templates that I made to use for a future date or for a project I am working on. They are located in separate repositories with placeholder text. All of these themes use the Materialize CSS library as I like the aesthetics of material design and the library is also very easy to use. In addition, all of these themes make use of SASS, a CSS preprocessor I chose because its syntax feels very similar to Python, a language whose syntax I enjoy a lot.</p>
-                            <p><a target="_blank" href="https://github.com/alienonolympus/static-materialize-theme">Static Materialize Theme</a></p>
-                            <img class="materialboxed media" src="media/static-theme.png">
-                            <p><a target="_blank" href="https://github.com/alienonolympus/scrolling-theme">Scrolling Theme</a></p>
-                            <img class="materialboxed media" src="media/scrolling-theme.png">
-                            <p><a target="_blank" href="https://github.com/alienonolympus/scrolling-theme">Dark Savvy Theme</a></p>
-                            <img class="materialboxed media" src="media/dark-theme.png">
+                        <h3>Website Themes</h3>
+                        <p>These website themes are a collection of website templates that I made to use for a future date or for a project I am working on. They are located in separate repositories with placeholder text. All of these themes use the Materialize CSS library as I like the aesthetics of material design and the library is also very easy to use. In addition, all of these themes make use of SASS, a CSS preprocessor I chose because its syntax feels very similar to Python, a language whose syntax I enjoy a lot.</p>
+                        <p><a target="_blank" href="https://github.com/alienonolympus/static-materialize-theme">Static Materialize Theme</a></p>
+                        <img class="materialboxed media" src="media/static-theme.png">
+                        <p><a target="_blank" href="https://github.com/alienonolympus/scrolling-theme">Scrolling Theme</a></p>
+                        <img class="materialboxed media" src="media/scrolling-theme.png">
+                        <p><a target="_blank" href="https://github.com/alienonolympus/scrolling-theme">Dark Savvy Theme</a></p>
+                        <img class="materialboxed media" src="media/dark-theme.png">
 
-                            <hr>
+                        <hr>
 
-                            <h3>Calc</h3>
-                            <p>I created this small project as an attempt to familiarise myself with the use, traversal and manipulation of tree structures. Mathematical expressions are can be stored recursively in trees, which makes them suitable for this project. Each mathematical expression is a tree structure that (usually) has an operation as a root node. When evaluating the result of the expression, the program uses the value of the child nodes and the nature of the operation at the root node.</p>
-                            <p>Example: 1+(2*(3+4)+5)*6-7
-                            <pre>
+                        <h3>Calc</h3>
+                        <p>I created this small project as an attempt to familiarise myself with the use, traversal and manipulation of tree structures. Mathematical expressions are can be stored recursively in trees, which makes them suitable for this project. Each mathematical expression is a tree structure that (usually) has an operation as a root node. When evaluating the result of the expression, the program uses the value of the child nodes and the nature of the operation at the root node.</p>
+                        <p>Example: 1+(2*(3+4)+5)*6-7
+                        <pre>
 Value: 108.0, Type: -
 |-- Value: 115.0, Type: +
     |-- Value: 1.0, Type: num
@@ -116,10 +116,21 @@ Value: 108.0, Type: -
             |-- Value: 5.0, Type: num
         |-- Value: 6.0, Type: num
 |-- Value: 7.0, Type: num
-                            </pre>
-                            </p>
-                            <p><a target="_blank" href="https://github.com/alienonolympus/calc">Link to Repository</a></p>
-                        </div>
+                        </pre>
+                        </p>
+                        <p><a target="_blank" href="https://github.com/alienonolympus/calc">Link to Repository</a></p>
+
+                        <hr>
+
+                        <h3>3D Printing Ordering Website</h3>
+                        <p>I worked on helping our 3D printing team create a website that allows people to order 3D print jobs, which can be processed and then delivered to them.</p>
+                        <p>Instead of following the route of mixing Python and PHP and creating the monstrosity known as Webcite (as seen above), I decided to use Python only. I chose to use the Flask framework because it was the simplest web development framework to use and needs the least time to make something usable. For the front end, I used Bootstrap to make sure the website looks  decent with minimal effort, allowing me to focus on the functions of the website. The following image is an example of how the login page looks like:</p>
+                        <img class="materialboxed media" src="media/3d1.png">
+                        <p>The development of this website was relatively fast and I setup most of the components required in one go (including logging in, placing orders, viewing order progress, administrative tools). Afterwards, I created an API to allow the mobile app of another member of our 3D printing team to interface with the website database. The following image is from a conversation I had with the person making the mobile app, showcasing some of the functionality of the API:</p>
+                        <img class="materialboxed media" src="media/3d2.png">
+                        <p><a target="_blank" href="https://github.com/alienonolympus/ordering_app">Link to Repository</a></p>
+                        <p><a target="_blank" href="https://order3d.herokuapp.com/">Link to Website</a></p>
+                    </div>
                 </div>
 
                 <div id="current_content" class="projects">
