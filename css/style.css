@@ -1,3 +1,7 @@
+body {
+  overflow: hide;
+  word-wrap: break-word; }
+
 h3, h5, a, pre {
   font-family: source-code-pro, monospace;
   font-weight: 600;
@@ -18,8 +22,15 @@ p a {
 .uline-hover div {
   display: inline-block; }
 
-a.uline-hover:hover h3 {
-  border-bottom: 3px solid #ffffff; }
+@media only screen and (max-width: 600px) {
+  a.uline-hover:hover h3 {
+    border-bottom: 1.8px solid #ffffff; } }
+@media only screen and (min-width: 600px) and (max-width: 992px) {
+  a.uline-hover:hover h3 {
+    border-bottom: 2.4px solid #ffffff; } }
+@media only screen and (min-width: 992px) {
+  a.uline-hover:hover h3 {
+    border-bottom: 3px solid #ffffff; } }
 
 #content {
   position: absolute;

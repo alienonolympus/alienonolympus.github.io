@@ -15,32 +15,28 @@
         <div id="main" class="black">
             <div id="content">
                 <div id="title">
-                    <div class="container valign-wrapper">
+                    <div class="container valign-wrapper hide-on-small-and-down">
                         <h1>Portfolio</h1>
                     </div>
                     <div class="container valign-wrapper hide-on-med-and-down">
-                        <h4>alienonolympus.github.io</h4>
+                        <h4>Collection of personal projects</h4>
                     </div>
                 </div>
                 <div id="links">
                     <div class="container">
-                        <a href="#!" id="early" class="uline-hover"><div><h3>early projects_</h3></div></a><br>
-                        <a href="#!" id="complete" class="uline-hover"><div><h3>complete projects_</h3></div></a><br>
+                        <div class="hide-on-med-and-up"><h1>Portfolio</h1></div>
+                        <a href="#!" id="scripts" class="uline-hover"><div><h3>scripts_</h3></div></a><br>
+                        <a href="#!" id="complete" class="uline-hover"><div><h3>past projects_</h3></div></a><br>
                         <a href="#!" id="current" class="uline-hover"><div><h3>current projects_</h3></div></a><br>
                         <a href="#!" id="misc_actions" class="uline-hover"><div><h3 id="misc_actions_text"></h3></div></a>
                     </div>
                 </div>
-                <div id="early_content" class="projects">
+                <div id="scripts_content" class="projects">
                     <div class="container">
+                        <a href="#!" class="uline-hover return"><div class="hide-on-med-and-up"><h3>< return</h3></div></a>
                         <h3>Simple-Calculator</h3>
                         <p>A very simple calculator in C++ that takes 2 numbers and a mathematical operator as input then outputs the value. I’ve removed one line since then and cleaned up useless files in the repo. Otherwise, it’s pretty much identical to the code I produced then.</p>
                         <p><a target="_blank" href="https://github.com/alienonolympus/Simple-Calculator">Link to Repository</a></p>
-
-                        <hr>
-
-                        <h3>FizzBuzzWoof</h3>
-                        <p>An implementation of the Fizz Buzz Woof thing in Rust. The program has a lot of unneeded complexity. Looking back, however, those unneeded complexities allowed me to learn a lot about basic OOP.</p>
-                        <p><a target="_blank" href="https://github.com/alienonolympus/FizzBuzzWoof">Link to Repository</a></p>
 
                         <hr>
 
@@ -59,22 +55,29 @@
                         <video class="media" controls="">
                             <source src="media/lobf.ogv" type="video/ogg">
                         </video>
+
+                        <hr>
+
+                        <h3>Homework Completion</h3>
+                        <p>A simple script I created in an hour in order to automate clicking 'Complete Homework' on Moodle. It is a webcrawler that logs into moodle and checks for any incomplete homework. A prompt follows to ask if you want to complete all the homework. I considered changing this from a console application to one with a GUI but felt like it was unnecessary. This script does not do much apart from, well, completing the homework so a user interface will not make it easier to use.</p>
+                        <p>Requires geckodriver, BeautifulSoup, numpy (decided to use numpy just because it simplified the problem of using 2D arrays and I already have it installed) and selenium.</p>
+                        <p><a target="_blank" href="https://alienonolympus.github.io/files/hw.py">Link to File</a></p>
                     </div>
                 </div>
 
                 <div id="complete_content" class="projects">
                     <div class="container">
-                        <h3>Homework Completion</h3>
-                        <p>This was less of a project and more of a simple script I created in an hour in order to automate clicking 'Complete Homework' on Moodle. It is a webcrawler that logs into moodle and checks for any incomplete homework. A prompt follows to ask if you want to complete all the homework. I considered changing this from a console application to one with a GUI but felt like it was unnecessary. This script does not do much apart from, well, completing the homework so a user interface will not make it easier to use.</p>
-                        <p>Requires geckodriver, BeautifulSoup, numpy (decided to use numpy just because it simplified the problem of using 2D arrays and I already have it installed) and selenium.</p>
-                        <p><a target="_blank" href="https://alienonolympus.github.io/files/hw.py">Link to File</a></p>
+                        <a href="#!" class="uline-hover return"><div class="hide-on-med-and-up"><h3>< return</h3></div></a>
+                        <h3>FizzBuzzWoof</h3>
+                        <p>An implementation of the Fizz Buzz Woof in Rust. The program has a lot of unneeded complexity. Looking back, however, those unneeded complexities allowed me to learn a lot about basic OOP.</p>
+                        <p><a target="_blank" href="https://github.com/alienonolympus/FizzBuzzWoof">Link to Repository</a></p>
 
                         <hr>
-    
+
                         <h3>Webcite</h3>
                         <p>RefMe, a citation website, was shutdown and merged into CiteThisForMe The merged website was not as responsive and did not support saving your bibliographies. Of course, these features were included in the premium version but I was reluctant to pay for a citation service. As a result, I decided to create my own version that would scrape information from websites and create a bibliography that can be saved online.</p>
                         <p>The core web scraping was done by requesting the source file of the URL and looking for metadata such as the author and date modified of a website. It is fairly straightforward except for the inclusion of a logistic regression learning algorithm used to 'find' the author when the author is not explicitly stated. The inclusion of this logistic regression learner was just for fun. The learner was trained with 7 features of text in links found on the website: inclusion of numbers; amount of 'words' with only alphabets; whether there is a first name matching the contents of a csv file; whether there is a surname matching the contents of a csv file; whether there is a word matching the contents of a csv file of common words used; length of the text; how many words are capitalised. The trained parameters were fairly accurate, although it can get confused when there are other names that are not related to the author of a website.</p>
-                        <p>Here is the web scraping in action on an early version of webcite:</p>
+                        <p>Here is the web scraping in action on an scripts version of webcite:</p>
                         <video class="media" controls="">
                             <source src="media/webcite1.ogv" type="video/ogg">
                         </video>
@@ -122,6 +125,13 @@ Value: 108.0, Type: -
 
                         <hr>
 
+                        <h3>Miniprograms</h3>
+                        <p>Originally started as minigames, miniprograms was a collection of terminal based minigames. These programs are written in Python and use curses so that they can be shown in terminal. The decision to use the terminal instead of a GUI was due to its simplicity and ease of prototyping. I wanted to find optimal solutions to these games but I realised that my current knowledge was not enough, and will have to implement it at a later date.</p>
+                        <p>There are a collection of novel and classic games and programs implemented, including flippy, tic-tac-toe, Conway's Game of Life etc.. However, my progress halted when I could not find free time while preparing for exams. I decided to archive the repository and work on other larger projects.</p>
+                        <p><a target="_blank" href="https://github.com/alienonolympus/minigames">Link to Repository</a></p>
+
+                        <hr>
+
                         <h3>3D Printing Ordering Website</h3>
                         <p>I worked on helping our 3D printing team create a website that allows people to order 3D print jobs, which can be processed and then delivered to them.</p>
                         <p>Instead of following the route of mixing Python and PHP and creating the monstrosity known as Webcite (as seen above), I decided to use Python only. I chose to use the Flask framework because it was the simplest web development framework to use and needs the least time to make something usable. For the front end, I used Bootstrap to make sure the website looks  decent with minimal effort, allowing me to focus on the functions of the website. The following image is an example of how the login page looks like:</p>
@@ -135,6 +145,7 @@ Value: 108.0, Type: -
 
                 <div id="current_content" class="projects">
                     <div class="container">
+                        <a href="#!" class="uline-hover return"><div class="hide-on-med-and-up"><h3>< return</h3></div></a>
                         <h3>alienonolympus.github.io</h3>
                         <p>This website was made to record the projects I have done and also keep track of my current extracirricular projects. A lot of the time I would start a project and forget about it, thus recording all my ongoing projects will allow me to remember to work on it. I would also use this portfolio as a 'diary' of my programming progress, allowing me to look back at decisions I made during the development process and evaluate them if there are any major issues popping up.</p>
                         <p>I originally used markdown and chose a template from Github Pages. However, I decided to change to using HTML and a premade CSS template due to the lack of flexibility of markdown. Pure CSS was chosen becaues its website was the one that first one to finish loading when I opened a myriad of CSS templates. Its minimalist design suited this portfolio due to this portfolio's simplicity.</p>
@@ -144,14 +155,6 @@ Value: 108.0, Type: -
                         <img class="materialboxed media" src="media/web2.png">
                         <img class="materialboxed media" src="media/web3.png">
                         <p><a target="_blank" href="https://github.com/alienonolympus/alienonolympus.github.io">Link to Repository</a></p>
-
-                        <hr>
-
-                        <h3>Miniprograms</h3>
-                        <p>Originally started as minigames, miniprograms was a collection of terminal based minigames. These programs are written in Python and use curses so that they can be shown in terminal. The decision to use the terminal instead of a GUI was due to its simplicity and ease of prototyping. I wanted to find optimal solutions to these games but I realised that my current knowledge was not enough, and will have to implement it at a later date.</p>
-                        <p>There are a collection of novel and classic games and programs implemented, including flippy, tic-tac-toe, Conway's Game of Life etc.. However, my progress halted when I could not find free time while preparing for exams.</p>
-                        <p>I now intend to use miniprograms as a way to store my smaller projects (including the previous games) that are not large enough to form their own repository.</p>
-                        <p><a target="_blank" href="https://github.com/alienonolympus/minigames">Link to Repository</a></p>
                     </div>            
                 </div>
             </div>

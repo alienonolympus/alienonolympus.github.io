@@ -1,14 +1,38 @@
 $.fn.set_font_size = function(){
-    $('h1').css('font-size',
-        25 + $(this).width() / 25
-    );
-    $('h3').css('font-size',
-        6 + $(this).width() / 50
-    );
-    $('p').css('font-size',
-        6 + $(this).width() / 90
-    );
-    $('p').css('text-align', 'justify');
+    if ($(window).width() > 992) {
+        $('h1').css('font-size',
+            72
+        );
+        $('h3').css('font-size',
+            30
+        );
+        $('p').css('font-size',
+            20
+        );
+        $('p').css('text-align', 'justify');
+    } else if ($(window).width() > 600) {
+        $('h1').css('font-size',
+            64
+        );
+        $('h3').css('font-size',
+            23
+        );
+        $('p').css('font-size',
+            20
+        );
+        $('p').css('text-align', 'justify');
+    } else {
+        $('h1').css('font-size',
+            48
+        );
+        $('h3').css('font-size',
+            28
+        );
+        $('p').css('font-size',
+            20
+        );
+        $('p').css('text-align', 'justify');
+    }
     $('.projects').css('height',
         $(window).height() * 0.90
     );
@@ -30,16 +54,24 @@ $.fn.show = function(){
 
 $.fn.align_left = function(){
     $(this).valign_center();
-    $(this).css('left', '10px');
-    $(this).css('width', '50%');
+    $(this).css('left', '5px');
+    if ($(window).width() > 600) {
+        $(this).css('width', '55%');
+    } else {
+        $(this).css('width', '95%');
+    }
     $(this).css('text-align', 'left');
     $(this).show();
 };
 
 $.fn.align_right = function(){
     $(this).valign_center();
-    $(this).css('right', '10px');
-    $(this).css('width', '50%');
+    $(this).css('right', '5px');
+    if ($(window).width() > 600) {
+        $(this).css('width', '45%');
+    } else {
+        $(this).css('width', '90%');
+    }
     $(this).css('text-align', 'right');
     $(this).show();
 };
@@ -68,7 +100,6 @@ $.fn.view_content = function(){
 }
 
 $(document).ready(function(){
-    $(window).set_font_size();
     window.current_view = "home";
     $(window).home();
     $('.materialboxed').materialbox();
@@ -80,34 +111,58 @@ $(window).resize(function(){
         $(window).home();
     } else {
         $(window).view_content();
-        if (window.current_view == "early") {
-            $('#early_content').align_left();
+        if (window.current_view == "scripts") {
+            $('#scripts_content').align_left();
+        } else if (window.current_view == "complete") {
+            $('#complete_content').align_left();
+        } else if (window.current_view == "current") {
+            $('#current_content').align_left();
+        }
+        if ($(window).width() <= 600) {
+            $('#links').hide();
+        } else {
+            $('#links').align_right();
         }
     }
 });
 
-$('#early').click(function() {
-    window.current_view = "early";
+$('#scripts').click(function() {
+    window.current_view = "scripts";
     $(window).view_content();
-    $('#early_content').align_left();
+    $('#scripts_content').align_left();
     $('#complete_content').hide();
     $('#current_content').hide();
+    if ($(window).width() <= 600) {
+        $('#links').hide();
+    } else {
+        $('#links').align_right();
+    }
 })
 
 $('#complete').click(function() {
     window.current_view = "complete";
     $(window).view_content();
-    $('#early_content').hide();
+    $('#scripts_content').hide();
     $('#complete_content').align_left();
     $('#current_content').hide();
+    if ($(window).width() <= 600) {
+        $('#links').hide();
+    } else {
+        $('#links').align_right();
+    }
 })
 
 $('#current').click(function() {
     window.current_view = "current";
     $(window).view_content();
-    $('#early_content').hide();
+    $('#scripts_content').hide();
     $('#complete_content').hide();
     $('#current_content').align_left();
+    if ($(window).width() <= 600) {
+        $('#links').hide();
+    } else {
+        $('#links').align_right();
+    }
 })
 
 $('#misc_actions').click(function() {
@@ -117,4 +172,9 @@ $('#misc_actions').click(function() {
         window.current_view = "home";
         $(window).home();
     }
+})
+
+$('.return').click(function() {
+    window.current_view = "home";
+    $(window).home();
 })
