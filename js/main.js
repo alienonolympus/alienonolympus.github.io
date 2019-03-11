@@ -4,7 +4,7 @@ $.fn.set_font_size = function(){
             72
         );
         $('h3').css('font-size',
-            30
+            29
         );
         $('p').css('font-size',
             20
@@ -15,7 +15,7 @@ $.fn.set_font_size = function(){
             64
         );
         $('h3').css('font-size',
-            23
+            21
         );
         $('p').css('font-size',
             20
@@ -77,6 +77,7 @@ $.fn.align_right = function(){
 };
 
 $.fn.home = function(){
+    $(window).set_font_size();
     $('#main').css('height', $(this).height());
     $('#content').css('top',
         ($(this).height() - $('#content').height()) / 2
@@ -84,18 +85,17 @@ $.fn.home = function(){
     $('#title').align_left();
     $('#links').align_right();
     $('.projects').hide();
-    $(window).set_font_size();
     document.getElementById("misc_actions_text").textContent="link to github";
 };
 
 $.fn.view_content = function(){
+    $(window).set_font_size();
     $('#main').css('height', $(this).height());
     $('#content').css('top',
         ($(this).height() - $('#content').height()) / 2
     );
     $('#title').hide();
     $('#links').align_right();
-    $(window).set_font_size();
     document.getElementById("misc_actions_text").textContent="< return";
 }
 
@@ -103,20 +103,20 @@ $(document).ready(function(){
     window.current_view = "home";
     $(window).home();
     $('.materialboxed').materialbox();
+    $(window).home();
 });
 
 $(window).resize(function(){
-    $(window).set_font_size();
     if (window.current_view == "home") {
         $(window).home();
     } else {
         $(window).view_content();
-        if (window.current_view == "scripts") {
-            $('#scripts_content').align_left();
-        } else if (window.current_view == "complete") {
-            $('#complete_content').align_left();
-        } else if (window.current_view == "current") {
-            $('#current_content').align_left();
+        if (window.current_view == "about") {
+            $('#about_content').align_left();
+        } else if (window.current_view == "featured") {
+            $('#featured_content').align_left();
+        } else if (window.current_view == "archive") {
+            $('#archive_content').align_left();
         }
         if ($(window).width() <= 600) {
             $('#links').hide();
@@ -126,12 +126,12 @@ $(window).resize(function(){
     }
 });
 
-$('#scripts').click(function() {
-    window.current_view = "scripts";
+$('#about').click(function() {
+    window.current_view = "about";
     $(window).view_content();
-    $('#scripts_content').align_left();
-    $('#complete_content').hide();
-    $('#current_content').hide();
+    $('#about_content').align_left();
+    $('#featured_content').hide();
+    $('#archive_content').hide();
     if ($(window).width() <= 600) {
         $('#links').hide();
     } else {
@@ -139,12 +139,12 @@ $('#scripts').click(function() {
     }
 })
 
-$('#complete').click(function() {
-    window.current_view = "complete";
+$('#featured').click(function() {
+    window.current_view = "featured";
     $(window).view_content();
-    $('#scripts_content').hide();
-    $('#complete_content').align_left();
-    $('#current_content').hide();
+    $('#about_content').hide();
+    $('#featured_content').align_left();
+    $('#archive_content').hide();
     if ($(window).width() <= 600) {
         $('#links').hide();
     } else {
@@ -152,12 +152,12 @@ $('#complete').click(function() {
     }
 })
 
-$('#current').click(function() {
-    window.current_view = "current";
+$('#archive').click(function() {
+    window.current_view = "archive";
     $(window).view_content();
-    $('#scripts_content').hide();
-    $('#complete_content').hide();
-    $('#current_content').align_left();
+    $('#about_content').hide();
+    $('#featured_content').hide();
+    $('#archive_content').align_left();
     if ($(window).width() <= 600) {
         $('#links').hide();
     } else {
