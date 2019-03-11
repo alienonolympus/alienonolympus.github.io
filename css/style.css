@@ -53,4 +53,17 @@ p a {
 .media {
   width: 100%; }
 
+.collapsible {
+  border: none;
+  padding: 0; }
+  .collapsible div {
+    margin: 0;
+    padding: 0; }
+
+.underline {
+  text-decoration: underline; }
+
+.centered {
+  text-align: center; }
+
 /*# sourceMappingURL=style.css.map */

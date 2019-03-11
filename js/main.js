@@ -96,13 +96,15 @@ $.fn.view_content = function(){
     );
     $('#title').hide();
     $('#links').align_right();
-    document.getElementById("misc_actions_text").textContent="< return";
+    document.getElementById("misc_actions_text").textContent="< return home";
+    $("video").prop("volume", 0);
 }
 
 $(document).ready(function(){
     window.current_view = "home";
     $(window).home();
     $('.materialboxed').materialbox();
+    $('.collapsible').collapsible();
     $(window).home();
 });
 
